@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pregunta importante</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin-top:100px;
+}
+
+#contenedor{
+    position:relative;
+    height:200px;
+}
+
+button{
+    font-size:20px;
+    padding:10px 20px;
+    margin:10px;
+    cursor:pointer;
+}
+
+#no{
+    position:absolute;
+    left:55%;
+    top:0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>¿Jonathan es homosexual?</h1>
+
+<div id="contenedor">
+<button onclick="aceptar()">Sí</button>
+<button id="no">No</button>
+</div>
+
+<script>
+const botonNo = document.getElementById("no");
+
+botonNo.addEventListener("mouseover", function(){
+    const ancho = window.innerWidth - botonNo.offsetWidth;
+    const alto = window.innerHeight - botonNo.offsetHeight;
+
+    const x = Math.random() * ancho;
+    const y = Math.random() * alto;
+
+    botonNo.style.position = "fixed";
+    botonNo.style.left = x + "px";
+    botonNo.style.top = y + "px";
+});
+
+function aceptar(){
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+}
+</script>
+
+</body>
+</html>
